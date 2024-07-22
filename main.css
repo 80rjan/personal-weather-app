@@ -1,0 +1,162 @@
+
+
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: Roboto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20%;
+    /*color: white;*/
+}
+input {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+#enterLocation {
+    width: 70%;
+    color: black;
+}
+section {
+    width: 100%;
+    background: #8CC0DE;
+    display: grid;
+    grid-template-columns: 53% auto;
+    color: white;
+    border-radius: 20px;
+}
+#weatherToday {
+    position: relative;
+    border-radius: 20px 0 0 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    padding-top: 10px;
+}
+#weatherToday::after {
+    content: "";
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    opacity: 0.1;
+    z-index: -1;
+}
+#weatherToday > h1,#importantData, #normalData {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+#weatherToday > h1 {
+    padding: 0 20px;
+}
+
+#importantData {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.weatherIconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.icon img {
+    width: auto;
+}
+.temp {
+    font-size: 40px;
+}
+.weatherConditionsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#normalData {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+}
+#normalData > h4 {
+    text-align: center;
+}
+.dataWrapper {
+    display: flex;
+    gap: 20px;
+    /*padding: 0 20px;*/
+}
+.dataWrapper > div {
+    text-align: center;
+}
+.dataWrapper h4 {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+.dataWrapper h2 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#weatherDays {
+    display: flex;
+    overflow-x: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+#weatherDays::-webkit-scrollbar {
+    display: none;
+}
+#weatherDays img {
+    width: 100%;
+}
+.dayWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-right: #655e63 solid 1px;
+    padding: 30px;
+}
+.dayWrapper:last-child {
+    border-right: none;
+}
+.dayTempWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px 10%;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+
+    }
+    #weatherToday {
+        border-radius: 20px 20px 0 0;
+        gap: 30px;
+    }
+
+    .dayWrapper {
+        gap: 15px;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+</head>
+<body>
+<main>
+    <div id="enterLocation">
+<!--        <label>Enter a location</label>-->
+        <input type="text">
+    </div>
+    <section>
+        <div id="weatherToday">
+            <div class="background-overlay"></div> <!-- Overlay div -->
+            <h1></h1>
+            <div id="importantData">
+                <div class="weatherIconWrapper">
+                    <div class="icon"><img src="" alt="Weather Icon"></div>
+                    <h1 class="temp"></h1>
+                </div>
+                <div class="weatherConditionsWrapper">
+                    <h3 class="conditions"></h3>
+                    <p class="feelsLike"></p>
+                </div>
+            </div>
+            <div id="normalData">
+                <div class="dataWrapper">
+                    <div class="maxTemp">
+                        <h4>Max temp:</h4>
+                        <h2></h2>
+                    </div>
+                    <div class="minTemp">
+                        <h4>Min temp:</h4>
+                        <h2></h2>
+                    </div>
+                    <div class="uvIndex">
+                        <h4>UV index:</h4>
+                        <h2></h2>
+                    </div>
+                    <div class="windSpeed">
+                        <h4>Wind speed:</h4>
+                        <h2></h2>
+                    </div>
+                </div>
+                <h4></h4>
+            </div>
+        </div>
+        <div id="weatherDays"></div>
+    </section>
+</main>
+</body>
+<script src="vanilla.js"></script>
+</html>
